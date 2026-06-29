@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Marcelo Soares — Software Engineer",
+    "description": "Personal portfolio of Marcelo Soares. Open-source projects, articles, and contact."
+  },
+  "nav": { "about": "About", "projects": "Projects", "contact": "Contact" },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Software Engineer",
+    "subtitle": "Building digital products focused on simplicity and performance.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact"
+  },
+  "about": {
+    "heading": "About",
+    "bio": [
+      "I'm Marcelo Soares, a software engineer based in Brazil. I've been working with web development for years, focusing on building clean and functional digital experiences.",
+      "My focus is on TypeScript, React, and Next.js. I enjoy well-written code, accessible interfaces, and products that solve real problems."
+    ],
+    "stackHeading": "Main stack"
+  },
+  "projects": {
+    "heading": "Projects",
+    "subtitle": "Selected open-source repositories.",
+    "viewOnGithub": "View on GitHub",
+    "starsLabel": "stars",
+    "empty": "Projects unavailable at the moment."
+  },
+  "contact": {
+    "heading": "Contact",
+    "description": "Let's talk about code, projects, or opportunities.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with Next.js"
+  }
+}
