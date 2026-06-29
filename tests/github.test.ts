@@ -86,8 +86,8 @@ describe("lib/github", () => {
       }));
 
       const user = await fetchUser("marcelosoaresdev");
-      expect(user.login).toBe("marcelosoaresdev");
-      expect(user.avatar_url).toContain("avatars");
+      expect(user!.login).toBe("marcelosoaresdev");
+      expect(user!.avatar_url).toContain("avatars");
     });
 
     it("retorna null em erro", async () => {

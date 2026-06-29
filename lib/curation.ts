@@ -8,8 +8,8 @@ export type CuratedProject = {
   descriptionEn?: string;
 };
 
-export type CuratedRepo = GitHubRepo & {
-  displayDescription: string;
+export type CuratedRepo = Omit<GitHubRepo, "description"> & {
+  description: string;
 };
 
 export function curateProjects(
