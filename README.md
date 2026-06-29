@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Marcelo Soares
 
-## Getting Started
+Portfólio pessoal construído com Next.js, shadcn/ui, Framer Motion e GitHub API.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router)
+- TypeScript strict
+- Tailwind CSS 4
+- shadcn/ui (Radix)
+- next-intl (PT-BR / EN)
+- next-themes (light / dark)
+- Framer Motion (animações sutis)
+
+## Desenvolvimento
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/[locale]/` — rotas localizadas (PT-BR, EN)
+- `components/sections/` — Hero, About, Projects, Contact
+- `components/shared/` — Navbar, Footer, toggles, FadeIn
+- `lib/` — github.ts (API), curation.ts (whitelist), i18n.ts
+- `data/projects.json` — curadoria manual de repositórios
+- `messages/` — traduções PT-BR e EN
 
-## Learn More
+## Documentação
 
-To learn more about Next.js, take a look at the following resources:
+- Spec: `docs/superpowers/specs/2026-06-29-portfolio-design.md`
+- Plan: `docs/superpowers/plans/2026-06-29-portfolio.md`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Hospedado na Vercel. Push em `main` dispara deploy automático.

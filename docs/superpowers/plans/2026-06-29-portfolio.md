@@ -2,11 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Portfólio pessoal em Next.js 15 que consome a GitHub API pública, bilíngue (PT-BR/EN), com temas light/dark, ~25 arquivos, deploy na Vercel.
+**Goal:** Portfólio pessoal em Next.js que consome a GitHub API pública, bilíngue (PT-BR/EN), com temas light/dark, ~25 arquivos, deploy na Vercel.
 
-**Architecture:** Next.js 15 App Router com `[locale]` segment, Server Components para fetch e SEO, Client Components só para toggles e animações. ISR de 1h para GitHub API. Curadoria via `data/projects.json`. i18n via `next-intl`, tema via `next-themes`, animações via Framer Motion (uso mínimo).
+**Architecture:** Next.js (App Router) com `[locale]` segment, Server Components para fetch e SEO, Client Components só para toggles e animações. ISR de 1h para GitHub API. Curadoria via `data/projects.json`. i18n via `next-intl`, tema via `next-themes`, animações via Framer Motion (uso mínimo).
 
-**Tech Stack:** Next.js 15, TypeScript strict, Tailwind CSS 4, shadcn/ui (Radix), Framer Motion, next-intl, next-themes, lucide-react, Geist fonts via `next/font/google`.
+**Tech Stack:** Next.js (versão atual via `create-next-app@latest`), TypeScript strict, Tailwind CSS 4 (`@import "tailwindcss"` syntax), shadcn/ui (Radix), Framer Motion, next-intl, next-themes, lucide-react, Geist fonts via `next/font/google`.
+
+> **Nota de versão (2026-06-29):** `create-next-app@latest` instala Next.js 16 e Tailwind 4. Ambos são compatíveis com todo o plano abaixo, exceto a Task 26 que usa sintaxe de variáveis CSS de Tailwind 4 via `@theme inline` em `globals.css` (NÃO `tailwind.config.ts`). Atualize antes de implementar a Task 26.
 
 **Reference Spec:** `docs/superpowers/specs/2026-06-29-portfolio-design.md`
 
@@ -73,19 +75,21 @@ portfolio/
 
 ## Fase 1 — Scaffold e Dependências
 
-### Task 1: Scaffold Next.js 15
+### Task 1: Scaffold Next.js
 
 **Files:**
 - Create: `package.json`, `tsconfig.json`, `next.config.ts`, `app/layout.tsx`, `app/page.tsx`, `app/globals.css`, `.gitignore`
 
-- [ ] **Step 1: Criar projeto Next.js 15**
+- [ ] **Step 1: Criar projeto Next.js (versão atual)**
 
 Run:
 ```bash
-cd "C:/Users/Marcelo/Desktop/Portfolio" && npx create-next-app@latest . --typescript --tailwind --app --src-dir=false --import-alias="@/*" --use-npm --eslint --no-turbopack --yes
+cd "C:/Users/Marcelo/Desktop/Portfolio" && npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias="@/*" --use-npm --eslint --yes
 ```
 
-Expected: projeto criado com `app/`, `package.json`, `tsconfig.json`, `next.config.ts`, etc.
+> **Nota Windows:** se o diretório tiver letra maiúscula (ex: `Portfolio`), o `create-next-app` pode reclamar. Workaround: scaffold num diretório temporário lowercase e mover os arquivos. Verificar `package.json` está com `"name": "portfolio"` (não `"portfolio-scaffold"`).
+
+Expected: projeto criado com `app/`, `package.json`, `tsconfig.json`, `next.config.ts`, etc. Versão Next.js será a mais recente (15+ ou 16) e Tailwind será v4.
 
 - [ ] **Step 2: Limpar boilerplate padrão**
 
@@ -114,11 +118,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 }
 ```
 
-Substituir `app/globals.css` por versão vazia:
+Substituir `app/globals.css` por versão vazia (Tailwind v4 syntax):
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
 - [ ] **Step 3: Inicializar git**
@@ -1691,80 +1693,47 @@ export default function RootPage() {
 }
 ```
 
-- [ ] **Step 4: Configurar globals.css com variáveis de tema**
+- [ ] **Step 4: Configurar globals.css com variáveis de tema (Tailwind v4)**
 
 Sobrescrever `app/globals.css`:
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #fafafa;
+  --color-foreground: #0a0a0a;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #737373;
+  --color-border: #e5e5e5;
+  --color-accent: #0066ff;
+  --color-accent-foreground: #ffffff;
+}
 
 @layer base {
-  :root {
-    --background: 250 250 250;
-    --foreground: 10 10 10;
-    --muted: 245 245 245;
-    --muted-foreground: 115 115 115;
-    --border: 229 229 229;
-    --accent: 0 102 255;
-    --accent-foreground: 255 255 255;
-  }
-
   .dark {
-    --background: 10 10 10;
-    --foreground: 250 250 250;
-    --muted: 38 38 38;
-    --muted-foreground: 163 163 163;
-    --border: 38 38 38;
-    --accent: 59 130 246;
-    --accent-foreground: 255 255 255;
+    --color-background: #0a0a0a;
+    --color-foreground: #fafafa;
+    --color-muted: #262626;
+    --color-muted-foreground: #a3a3a3;
+    --color-border: #262626;
+    --color-accent: #3b82f6;
+    --color-accent-foreground: #ffffff;
   }
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
   }
 }
 ```
 
-- [ ] **Step 5: Atualizar tailwind.config.ts com variáveis CSS**
+> **Nota Tailwind v4:** variáveis CSS são definidas em `@theme` (não `tailwind.config.ts`). Para usar: `bg-background`, `text-foreground`, `border-border` automaticamente. O `darkMode` vira `@custom-variant dark`.
 
-Substituir `tailwind.config.ts`:
-```ts
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  darkMode: ["class"],
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./lib/**/*.{ts,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "rgb(var(--background) / <alpha-value>)",
-        foreground: "rgb(var(--foreground) / <alpha-value>)",
-        muted: "rgb(var(--muted) / <alpha-value>)",
-        "muted-foreground": "rgb(var(--muted-foreground) / <alpha-value>)",
-        border: "rgb(var(--border) / <alpha-value>)",
-        accent: "rgb(var(--accent) / <alpha-value>)",
-        "accent-foreground": "rgb(var(--accent-foreground) / <alpha-value>)",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
-      },
-    },
-  },
-  plugins: [],
-};
-
-export default config;
-```
-
-- [ ] **Step 6: Verificar build**
+- [ ] **Step 5: Verificar build**
 
 Run:
 ```bash
@@ -1773,7 +1742,7 @@ cd "C:/Users/Marcelo/Desktop/Portfolio" && npm run build
 
 Expected: build concluído sem erros.
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 6: Commit**
 
 ```bash
 git add -A && git commit -m "feat(layout): integrate providers, fonts, i18n, theme, navbar and footer"
