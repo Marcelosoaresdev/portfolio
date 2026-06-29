@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LangToggle } from "./lang-toggle";
@@ -15,9 +14,9 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: "#about", label: t("about"), num: "01" },
-    { href: "#projects", label: t("projects"), num: "02" },
-    { href: "#contact", label: t("contact"), num: "03" },
+    { href: "#about", label: t("about") },
+    { href: "#projects", label: t("projects") },
+    { href: "#contact", label: t("contact") },
   ];
 
   // Lock body scroll while overlay is open
@@ -46,9 +45,9 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="font-display text-lg font-bold tracking-tight"
+            className="font-sans text-lg font-bold tracking-tight"
           >
-            Marcelo<span className="text-accent">.</span>
+            Marcelo.
           </Link>
 
           {/* Desktop nav */}
@@ -57,7 +56,7 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="link-underline text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
               </a>
@@ -81,78 +80,55 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Full-screen overlay */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            key="overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md"
-            onClick={() => setOpen(false)}
-            role="dialog"
-            aria-modal="true"
+      {/* Full-screen mobile overlay */}
+      {open && (
+        <div
+          className="fixed inset-0 z-50 bg-background"
+          onClick={() => setOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="flex h-full w-full flex-col px-8 py-6"
+            onClick={(e) => e.stopPropagation()}
           >
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "tween", ease: [0.22, 1, 0.36, 1], duration: 0.4 }}
-              className="ml-auto flex h-full w-full max-w-md flex-col border-l border-border/40 bg-background px-8 py-6 shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Top row — close */}
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">
-                  Menu
-                </span>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  aria-label="Close menu"
+            {/* Top row — close */}
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">
+                Menu
+              </span>
+              <Button
+                variant="ghost"
+                size="icon"
+                aria-label="Close menu"
+                onClick={() => setOpen(false)}
+              >
+                <X className="h-5 w-5" />
+              </Button>
+            </div>
+
+            {/* Nav links */}
+            <nav className="mt-16 flex flex-1 flex-col justify-center gap-6">
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
                   onClick={() => setOpen(false)}
+                  className="text-3xl font-semibold leading-tight tracking-tight transition-colors hover:text-muted-foreground"
                 >
-                  <X className="h-5 w-5" />
-                </Button>
-              </div>
+                  {l.label}
+                </a>
+              ))}
+            </nav>
 
-              {/* Nav links — display type */}
-              <nav className="mt-16 flex flex-1 flex-col justify-center gap-2">
-                {links.map((l, i) => (
-                  <motion.a
-                    key={l.href}
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    initial={{ opacity: 0, x: 24 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      delay: 0.12 + i * 0.06,
-                      duration: 0.4,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className="group flex items-baseline gap-4 py-3"
-                  >
-                    <span className="font-mono text-xs text-muted-foreground">
-                      {l.num}
-                    </span>
-                    <span className="font-display text-5xl font-bold leading-none tracking-tight transition-colors group-hover:text-accent">
-                      {l.label}
-                    </span>
-                  </motion.a>
-                ))}
-              </nav>
-
-              {/* Bottom row — toggles */}
-              <div className="flex items-center justify-between border-t border-border/40 pt-6">
-                <LangToggle />
-                <ThemeToggle />
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {/* Bottom row — toggles */}
+            <div className="flex items-center justify-between border-t border-border/40 pt-6">
+              <LangToggle />
+              <ThemeToggle />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

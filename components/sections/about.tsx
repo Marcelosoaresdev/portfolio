@@ -16,16 +16,9 @@ export function About({ user }: Props) {
 
   return (
     <section id="about" className="relative border-t border-border/40 py-24 md:py-32">
-      {/* Section divider hairline accent */}
-      <div className="absolute inset-x-0 top-0 mx-auto h-px max-w-6xl bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
-
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
-          <SectionHeading
-            id="about"
-            eyebrow={`01 — ${t("heading")}`}
-            title={t("heading")}
-          />
+          <SectionHeading id="about" title={t("heading")} />
 
           <div className="grid gap-12 md:grid-cols-[1fr_240px] md:items-start">
             <div>
@@ -60,7 +53,7 @@ export function About({ user }: Props) {
                 <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
                   Location
                 </p>
-                <p className="mt-1.5 font-display text-lg font-medium">
+                <p className="mt-1.5 text-lg font-medium">
                   {user?.location || "Brasil"}
                 </p>
               </div>
@@ -72,7 +65,7 @@ export function About({ user }: Props) {
                   href={user?.html_url || "https://github.com/marcelosoaresdev"}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="link-underline mt-1.5 inline-block font-display text-lg font-medium"
+                  className="mt-1.5 inline-block text-lg font-medium transition-colors hover:text-foreground text-muted-foreground"
                 >
                   @{user?.login || "marcelosoaresdev"}
                 </a>
@@ -81,7 +74,7 @@ export function About({ user }: Props) {
                 <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
                   Focus
                 </p>
-                <p className="mt-1.5 font-display text-lg font-medium">
+                <p className="mt-1.5 text-lg font-medium">
                   Web · TypeScript
                 </p>
               </div>

@@ -11,13 +11,10 @@ type Props = {
 
 export function ProjectCard({ repo, viewLabel, starsLabel }: Props) {
   return (
-    <Card className="group relative h-full border-border/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-[0_8px_30px_-12px_rgba(217,119,87,0.25)]">
-      {/* Hairline accent strip on hover */}
-      <span className="pointer-events-none absolute inset-x-0 top-0 h-px scale-x-0 bg-accent transition-transform duration-500 ease-out group-hover:scale-x-100" />
-
+    <Card className="group relative h-full border-border transition-colors hover:border-foreground">
       <CardHeader>
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-display text-lg font-semibold leading-tight tracking-tight">
+          <h3 className="font-sans text-lg font-semibold leading-tight tracking-tight">
             {repo.name}
           </h3>
           <a
@@ -25,9 +22,9 @@ export function ProjectCard({ repo, viewLabel, starsLabel }: Props) {
             target="_blank"
             rel="noreferrer noopener"
             aria-label={`${viewLabel}: ${repo.name}`}
-            className="-mr-1 -mt-1 inline-flex h-7 w-7 shrink-0 cursor-pointer items-center justify-center rounded-full text-muted-foreground transition-all hover:bg-accent hover:text-accent-foreground"
+            className="-mr-1 -mt-1 inline-flex h-7 w-7 shrink-0 cursor-pointer items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
           >
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
       </CardHeader>
@@ -47,7 +44,7 @@ export function ProjectCard({ repo, viewLabel, starsLabel }: Props) {
             )}
           </div>
           {repo.stargazers_count > 0 && (
-            <span className="num-tabular inline-flex items-center gap-1 text-muted-foreground">
+            <span className="inline-flex items-center gap-1 text-muted-foreground">
               <Star className="h-3 w-3" />
               {repo.stargazers_count.toLocaleString()} {starsLabel}
             </span>

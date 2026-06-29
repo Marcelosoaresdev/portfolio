@@ -13,13 +13,10 @@ export function Projects({ projects }: Props) {
 
   return (
     <section id="projects" className="relative border-t border-border/40 py-24 md:py-32">
-      <div className="absolute inset-x-0 top-0 mx-auto h-px max-w-6xl bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
-
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeading
             id="projects"
-            eyebrow={`02 — ${t("heading")}`}
             title={t("heading")}
             subtitle={t("subtitle")}
           />
