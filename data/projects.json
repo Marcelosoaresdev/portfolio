@@ -1,0 +1,8 @@
+[
+  {
+    "slug": "portfolio",
+    "order": 1,
+    "descriptionPt": "Este portfólio pessoal, construído com Next.js, shadcn/ui e Framer Motion.",
+    "descriptionEn": "This personal portfolio, built with Next.js, shadcn/ui, and Framer Motion."
+  }
+]
