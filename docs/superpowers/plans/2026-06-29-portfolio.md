@@ -966,8 +966,8 @@ export type CuratedProject = {
   descriptionEn?: string;
 };
 
-export type CuratedRepo = GitHubRepo & {
-  displayDescription: string;
+export type CuratedRepo = Omit<GitHubRepo, "description"> & {
+  description: string;
 };
 
 export function curateProjects(
@@ -988,7 +988,7 @@ export function curateProjects(
     const custom = locale === "en" ? c.descriptionEn : c.descriptionPt;
     return {
       ...repo,
-      displayDescription: custom || repo.description || "",
+      description: custom || repo.description || "",
     };
   });
 }
@@ -1237,11 +1237,7 @@ export function Navbar() {
           <LangToggle />
           <ThemeToggle />
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Open menu">
-                <Menu className="h-4 w-4" />
-              </Button>
-            </SheetTrigger>
+            <SheetTrigger render={<Button variant="ghost" size="icon" aria-label="Open menu"><Menu className="h-4 w-4" /></Button>} />
             <SheetContent side="right">
               <nav className="mt-8 flex flex-col gap-6">
                 {links.map((l) => (
@@ -1341,7 +1337,7 @@ export function ProjectCard({ repo, viewLabel, starsLabel }: Props) {
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-muted-foreground">{repo.displayDescription}</p>
+        <p className="text-sm text-muted-foreground">{repo.description}</p>
         <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
           {repo.language && <Badge variant="secondary">{repo.language}</Badge>}
           {repo.stargazers_count > 0 && (
@@ -1391,12 +1387,8 @@ export function Hero() {
             {t("subtitle")}
           </p>
           <div className="mt-8 flex gap-3">
-            <Button asChild>
-              <a href="#projects">{t("ctaProjects")}</a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="#contact">{t("ctaContact")}</a>
-            </Button>
+            <Button render={<a href="#projects">{t("ctaProjects")}</a>} />
+            <Button variant="outline" render={<a href="#contact">{t("ctaContact")}</a>} />
           </div>
         </FadeIn>
       </div>
