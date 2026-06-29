@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Marcelo Soares — Engenheiro de Software",
+    "description": "Portfólio pessoal de Marcelo Soares. Projetos open-source, artigos e contato."
+  },
+  "nav": { "about": "Sobre", "projects": "Projetos", "contact": "Contato" },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "title": "Engenheiro de Software",
+    "subtitle": "Construindo produtos digitais com foco em simplicidade e performance.",
+    "ctaProjects": "Ver projetos",
+    "ctaContact": "Contato"
+  },
+  "about": {
+    "heading": "Sobre",
+    "bio": [
+      "Sou Marcelo Soares, engenheiro de software baseado no Brasil. Trabalho com desenvolvimento web há anos, focando em criar experiências digitais limpas e funcionais.",
+      "Meu foco está em TypeScript, React e Next.js. Gosto de código bem escrito, interfaces acessíveis e produtos que resolvem problemas reais."
+    ],
+    "stackHeading": "Stack principal"
+  },
+  "projects": {
+    "heading": "Projetos",
+    "subtitle": "Repositórios open-source selecionados.",
+    "viewOnGithub": "Ver no GitHub",
+    "starsLabel": "stars",
+    "empty": "Projetos indisponíveis no momento."
+  },
+  "contact": {
+    "heading": "Contato",
+    "description": "Vamos conversar sobre código, projetos ou oportunidades.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "footer": {
+    "copyright": "Todos os direitos reservados.",
+    "builtWith": "Construído com Next.js"
+  }
+}
