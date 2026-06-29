@@ -3,7 +3,7 @@
     "title": "Marcelo Soares — Engenheiro de Software",
     "description": "Portfólio pessoal de Marcelo Soares. Projetos open-source, artigos e contato."
   },
-  "nav": { "about": "Sobre", "projects": "Projetos", "contact": "Contato" },
+  "nav": { "about": "Sobre", "projects": "Projetos", "contact": "Contato", "languageLabel": "Mudar idioma para" },
   "hero": {
     "greeting": "Olá, eu sou",
     "title": "Engenheiro de Software",

@@ -3,7 +3,7 @@
     "title": "Marcelo Soares — Software Engineer",
     "description": "Personal portfolio of Marcelo Soares. Open-source projects, articles, and contact."
   },
-  "nav": { "about": "About", "projects": "Projects", "contact": "Contact" },
+  "nav": { "about": "About", "projects": "Projects", "contact": "Contact", "languageLabel": "Switch language to" },
   "hero": {
     "greeting": "Hi, I'm",
     "title": "Software Engineer",
