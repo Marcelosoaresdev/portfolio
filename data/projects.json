@@ -1,14 +1,12 @@
 [
   {
-    "slug": "portfolio",
-    "order": 1,
-    "descriptionPt": "Este portfólio pessoal, construído com Next.js, shadcn/ui e Framer Motion.",
-    "descriptionEn": "This personal portfolio, built with Next.js, shadcn/ui, and Framer Motion."
+    "slug": "Desafio-To-do-list-app",
+    "descriptionPt": "Aplicação fullstack do zero: React no front, Node.js no back. Autenticação JWT + bcrypt, middlewares de proteção de rotas e PostgreSQL via Neon com Drizzle ORM.",
+    "descriptionEn": "Fullstack app built from scratch: React on the front, Node.js on the back. JWT + bcrypt auth, route protection middleware, and PostgreSQL via Neon with Drizzle ORM."
   },
   {
-    "slug": "Desafio-To-do-list-app",
-    "order": 2,
-    "descriptionPt": "Aplicação fullstack: React no front, Node.js no back. Autenticação JWT + bcrypt, middlewares de proteção de rotas e PostgreSQL via Neon com Drizzle ORM.",
-    "descriptionEn": "Fullstack application: React on the front, Node.js on the back. JWT + bcrypt authentication, route protection middleware, and PostgreSQL via Neon with Drizzle ORM."
+    "slug": "SiteCursos",
+    "descriptionPt": "Plataforma de cursos da Vitis Souls. Front completo em React + Vite + TailwindCSS — code splitting, lazy loading, otimização de imagens com Sharp/WebP e SEO técnico. Construído do zero, da UI ao deploy.",
+    "descriptionEn": "Course platform for Vitis Souls. Full frontend in React + Vite + TailwindCSS — code splitting, lazy loading, Sharp/WebP image optimization, and technical SEO. Built from scratch, from UI to deploy."
   }
 ]

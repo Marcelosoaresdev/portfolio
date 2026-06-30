@@ -3,7 +3,6 @@ import type { Locale } from "@/lib/i18n";
 
 export type CuratedProject = {
   slug: string;
-  order: number;
   descriptionPt?: string;
   descriptionEn?: string;
 };
@@ -19,15 +18,13 @@ export function curateProjects(
 ): CuratedRepo[] {
   const map = new Map(curated.map((c) => [c.slug, c]));
   const filtered = repos.filter((r) => map.has(r.name));
-  const sorted = [...filtered].sort((a, b) => {
-    const oa = map.get(a.name)!.order;
-    const ob = map.get(b.name)!.order;
-    return oa - ob;
-  });
+  const sorted = [...filtered].sort(
+    (a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+  );
 
   return sorted.map((repo) => {
-    const c = map.get(repo.name)!;
-    const custom = locale === "en" ? c.descriptionEn : c.descriptionPt;
+    const c = map.get(repo.name);
+    const custom = c ? (locale === "en" ? c.descriptionEn : c.descriptionPt) : undefined;
     return {
       ...repo,
       description: custom || repo.description || "",

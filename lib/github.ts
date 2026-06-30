@@ -8,6 +8,7 @@ export type GitHubRepo = {
   language: string | null;
   fork: boolean;
   archived: boolean;
+  updated_at: string;
 };
 
 export type GitHubUser = {
