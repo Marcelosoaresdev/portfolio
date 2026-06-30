@@ -82,7 +82,6 @@ export function Hero({ user }: Props) {
 
             {/* Caption — mono, beneath the photo */}
             <div className="mt-4 flex items-baseline justify-between gap-4 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
-              <span>— {user?.location || "Brasil"}</span>
               <span>@{user?.login || "marcelosoaresdev"}</span>
             </div>
           </div>

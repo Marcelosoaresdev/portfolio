@@ -8,7 +8,7 @@ type Props = {
   user: GitHubUser | null;
 };
 
-const STACK = ["TypeScript", "React", "Node.js", "Next.js", "PostgreSQL", "Drizzle", "Tailwind", "Docker"];
+const STACK = ["TypeScript", "React", "Node.js", "Next.js", "PostgreSQL", "Tailwind", "Docker"];
 
 export function About({ user }: Props) {
   const t = useTranslations("about");
