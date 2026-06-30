@@ -7,7 +7,6 @@
   "hero": {
     "greeting": "Olá, eu sou",
     "title": "Desenvolvedor Full Stack",
-    "subtitle": "Programo tudo, mas prefiro banco e API.",
     "ctaProjects": "Projetos",
     "ctaContact": "Falar comigo"
   },

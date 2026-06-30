@@ -39,11 +39,6 @@ export function Hero({ user }: Props) {
               {t("title")}
             </p>
 
-            {/* Long subtitle */}
-            <p className="mt-3 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              {t("subtitle")}
-            </p>
-
             {/* CTAs */}
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Button
