@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "title": "Marcelo Soares — Software Engineer",
+    "title": "Marcelo Soares — Full Stack Developer",
     "description": "Personal portfolio of Marcelo Soares. Open-source projects, articles, and contact."
   },
   "nav": { "about": "About", "projects": "Projects", "contact": "Contact", "languageLabel": "Switch language to" },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Software Engineer",
+    "title": "Full Stack Developer",
     "subtitle": "Building digital products focused on simplicity and performance.",
     "ctaProjects": "View projects",
     "ctaContact": "Contact"
@@ -14,8 +14,8 @@
   "about": {
     "heading": "About",
     "bio": [
-      "I'm Marcelo Soares, a software engineer based in Brazil. I've been working with web development for years, focusing on building clean and functional digital experiences.",
-      "My focus is on TypeScript, React, and Next.js. I enjoy well-written code, accessible interfaces, and products that solve real problems."
+      "I'm Marcelo Soares, a full stack developer based in Brazil. I work across the web stack — from UI to database, including APIs, auth, and persistence.",
+      "On the front: TypeScript, React, Next.js. On the back: Node.js, PostgreSQL, Drizzle. I enjoy well-written code, accessible interfaces, and products that solve real problems."
     ],
     "stackHeading": "Main stack"
   },
