@@ -14,8 +14,8 @@
   "about": {
     "heading": "Sobre",
     "bio": [
-      "Atualmente trabalho na 4CODGO otimizando uma plataforma em produção. Atuo em gargalos críticos: reduzi o carregamento inicial de 5s para 2s (60%) e o custo de render de listas aninhadas em 80%.",
-      "Antes disso fui dev na Vitis Souls, em Volta Redonda, onde construí do zero a plataforma de cursos (React, Vite, TailwindCSS). Trabalho de ponta a ponta — API, banco, interface. Stack do dia: Node.js, PostgreSQL, React, Drizzle, Docker."
+      "Sou Marcelo, moro em Volta Redonda, no interior do Rio. Programo há um tempo, e o que me prende mesmo é resolver o problema inteiro — não só a interface, não só a API. Quero entender como as coisas funcionam de ponta a ponta.",
+      "Quando não tô no código, geralmente tô estudando, lendo ou fuçando algum projeto pessoal. Gosto de coisa bem feita — código que dá pra ler daqui a seis meses, e de aprender fazendo."
     ],
     "stackHeading": "Stack principal"
   },

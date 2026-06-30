@@ -14,8 +14,8 @@
   "about": {
     "heading": "About",
     "bio": [
-      "Currently at 4CODGO, optimizing a production platform. I work on critical bottlenecks — cut initial load from 5s to 2s (60%) and dropped render cost on nested lists by 80%.",
-      "Before that I was a dev at Vitis Souls, based in Volta Redonda, where I built their courses platform from scratch (React, Vite, TailwindCSS). I work end to end — API, database, UI. Daily stack: Node.js, PostgreSQL, React, Drizzle, Docker."
+      "I'm Marcelo, based in Volta Redonda, a small city in Rio de Janeiro state. I've been coding for a while, and what keeps me hooked is solving the whole problem — not just the UI, not just the API. I want to understand how things work end to end.",
+      "When I'm not coding, I'm usually studying, reading, or tinkering on a side project. I like things done well — code I can read six months from now — and I learn best by building."
     ],
     "stackHeading": "Main stack"
   },
