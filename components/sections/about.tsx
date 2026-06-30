@@ -8,7 +8,7 @@ type Props = {
   user: GitHubUser | null;
 };
 
-const STACK = ["TypeScript", "React", "Next.js", "Node.js", "Tailwind", "PostgreSQL"];
+const STACK = ["TypeScript", "React", "Node.js", "Next.js", "PostgreSQL", "Tailwind"];
 
 export function About({ user }: Props) {
   const t = useTranslations("about");
@@ -75,7 +75,7 @@ export function About({ user }: Props) {
                   Focus
                 </p>
                 <p className="mt-1.5 text-lg font-medium">
-                  Web · TypeScript
+                  Full Stack · TypeScript
                 </p>
               </div>
             </aside>
