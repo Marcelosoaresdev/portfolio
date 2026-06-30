@@ -1,34 +1,34 @@
 {
   "metadata": {
     "title": "Marcelo Soares — Desenvolvedor Full Stack",
-    "description": "Portfólio pessoal de Marcelo Soares. Projetos open-source, artigos e contato."
+    "description": "Portfólio de Marcelo Soares, desenvolvedor full stack em Volta Redonda, RJ. Projetos, stack e contato."
   },
   "nav": { "about": "Sobre", "projects": "Projetos", "contact": "Contato", "languageLabel": "Mudar idioma para" },
   "hero": {
     "greeting": "Olá, eu sou",
     "title": "Desenvolvedor Full Stack",
-    "subtitle": "Construindo produtos digitais com foco em simplicidade e performance.",
-    "ctaProjects": "Ver projetos",
-    "ctaContact": "Contato"
+    "subtitle": "Node.js, PostgreSQL e React no dia a dia. Da API à interface.",
+    "ctaProjects": "Projetos",
+    "ctaContact": "Falar comigo"
   },
   "about": {
     "heading": "Sobre",
     "bio": [
-      "Sou Marcelo Soares, desenvolvedor full stack baseado no Brasil. Trabalho com desenvolvimento web, da interface ao banco de dados — APIs, autenticação e persistência.",
-      "No front, TypeScript, React e Next.js. No back, Node.js, PostgreSQL e Drizzle. Gosto de código bem escrito, interfaces acessíveis e produtos que resolvem problemas reais."
+      "Atualmente trabalho na 4CODGO otimizando uma plataforma em produção. Atuo em gargalos críticos: reduzi o carregamento inicial de 5s para 2s (60%) e o custo de render de listas aninhadas em 80%.",
+      "Antes disso fui dev na Vitis Souls, em Volta Redonda, onde construí do zero a plataforma de cursos (React, Vite, TailwindCSS). Trabalho de ponta a ponta — API, banco, interface. Stack do dia: Node.js, PostgreSQL, React, Drizzle, Docker."
     ],
     "stackHeading": "Stack principal"
   },
   "projects": {
     "heading": "Projetos",
-    "subtitle": "Repositórios open-source selecionados.",
+    "subtitle": "Projetos que construí do zero. Código aberto.",
     "viewOnGithub": "Ver no GitHub",
     "starsLabel": "stars",
     "empty": "Projetos indisponíveis no momento."
   },
   "contact": {
     "heading": "Contato",
-    "description": "Vamos conversar sobre código, projetos ou oportunidades.",
+    "description": "Tem uma vaga, um projeto ou só quer trocar uma ideia? Mande mensagem.",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "email": "Email"

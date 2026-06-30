@@ -1,34 +1,34 @@
 {
   "metadata": {
     "title": "Marcelo Soares — Full Stack Developer",
-    "description": "Personal portfolio of Marcelo Soares. Open-source projects, articles, and contact."
+    "description": "Marcelo Soares' portfolio — full stack developer based in Volta Redonda, Brazil. Projects, stack, and contact."
   },
   "nav": { "about": "About", "projects": "Projects", "contact": "Contact", "languageLabel": "Switch language to" },
   "hero": {
     "greeting": "Hi, I'm",
     "title": "Full Stack Developer",
-    "subtitle": "Building digital products focused on simplicity and performance.",
-    "ctaProjects": "View projects",
-    "ctaContact": "Contact"
+    "subtitle": "Node.js, PostgreSQL, and React every day. From API to UI.",
+    "ctaProjects": "Projects",
+    "ctaContact": "Get in touch"
   },
   "about": {
     "heading": "About",
     "bio": [
-      "I'm Marcelo Soares, a full stack developer based in Brazil. I work across the web stack — from UI to database, including APIs, auth, and persistence.",
-      "On the front: TypeScript, React, Next.js. On the back: Node.js, PostgreSQL, Drizzle. I enjoy well-written code, accessible interfaces, and products that solve real problems."
+      "Currently at 4CODGO, optimizing a production platform. I work on critical bottlenecks — cut initial load from 5s to 2s (60%) and dropped render cost on nested lists by 80%.",
+      "Before that I was a dev at Vitis Souls, based in Volta Redonda, where I built their courses platform from scratch (React, Vite, TailwindCSS). I work end to end — API, database, UI. Daily stack: Node.js, PostgreSQL, React, Drizzle, Docker."
     ],
     "stackHeading": "Main stack"
   },
   "projects": {
     "heading": "Projects",
-    "subtitle": "Selected open-source repositories.",
+    "subtitle": "Projects I built from scratch. Open source.",
     "viewOnGithub": "View on GitHub",
     "starsLabel": "stars",
     "empty": "Projects unavailable at the moment."
   },
   "contact": {
     "heading": "Contact",
-    "description": "Let's talk about code, projects, or opportunities.",
+    "description": "Got a role, a project, or just want to swap notes? Drop me a line.",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "email": "Email"
