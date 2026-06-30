@@ -24,7 +24,7 @@ export function Hero({ user }: Props) {
           <div className="flex flex-col">
             {/* Greeting — mono caps */}
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">
-              {t("greeting")} — {new Date().getFullYear()}
+              {t("greeting")}
             </p>
 
             {/* Headline */}

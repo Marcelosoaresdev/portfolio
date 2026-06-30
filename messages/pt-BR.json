@@ -34,7 +34,6 @@
     "email": "Email"
   },
   "footer": {
-    "copyright": "Todos os direitos reservados.",
-    "builtWith": "Construído com Next.js"
+    "copyright": "todos os direitos reservados"
   }
 }
