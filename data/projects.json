@@ -6,7 +6,7 @@
   },
   {
     "slug": "SiteCursos",
-    "descriptionPt": "Plataforma de cursos da Vitis Souls. Front completo em React + Vite + TailwindCSS — code splitting, lazy loading, otimização de imagens com Sharp/WebP e SEO técnico. Construído do zero, da UI ao deploy.",
-    "descriptionEn": "Course platform for Vitis Souls. Full frontend in React + Vite + TailwindCSS — code splitting, lazy loading, Sharp/WebP image optimization, and technical SEO. Built from scratch, from UI to deploy."
+    "descriptionPt": "Plataforma de cursos da Vitis Souls. Front completo em React + Vite + TailwindCSS: code splitting, lazy loading, otimização de imagens com Sharp/WebP e SEO técnico. Construído do zero, da UI ao deploy.",
+    "descriptionEn": "Course platform for Vitis Souls. Full frontend in React + Vite + TailwindCSS: code splitting, lazy loading, Sharp/WebP image optimization, and technical SEO. Built from scratch, from UI to deploy."
   }
 ]
