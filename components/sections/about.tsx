@@ -75,7 +75,7 @@ export function About({ user }: Props) {
                   Focus
                 </p>
                 <p className="mt-1.5 text-lg font-medium">
-                  Full Stack · TypeScript
+                  Full Stack
                 </p>
               </div>
             </aside>

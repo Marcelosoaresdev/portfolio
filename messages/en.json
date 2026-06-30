@@ -7,7 +7,7 @@
   "hero": {
     "greeting": "Hi, I'm",
     "title": "Full Stack Developer",
-    "subtitle": "Node.js, PostgreSQL, and React every day. From API to UI.",
+    "subtitle": "Optimize, integrate, database. UI too.",
     "ctaProjects": "Projects",
     "ctaContact": "Get in touch"
   },
@@ -17,7 +17,7 @@
       "I've been coding for about two years, professionally for a little over a year. What keeps me hooked is understanding how things work under the hood, not just what shows up on the screen.",
       "When I'm not coding, I'm usually studying, reading, or tinkering on a side project. I like things done well and I learn best by building."
     ],
-    "stackHeading": "Main stack"
+    "stackHeading": "Technologies"
   },
   "projects": {
     "heading": "Projects",

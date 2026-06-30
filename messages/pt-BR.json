@@ -7,7 +7,7 @@
   "hero": {
     "greeting": "Olá, eu sou",
     "title": "Desenvolvedor Full Stack",
-    "subtitle": "Node.js, PostgreSQL e React no dia a dia. Da API à interface.",
+    "subtitle": "Otimizar, integrar, banco. UI também.",
     "ctaProjects": "Projetos",
     "ctaContact": "Falar comigo"
   },
@@ -17,7 +17,7 @@
       "Programo há uns dois anos, profissionalmente há pouco mais de um ano. O que me prende é entender como as coisas funcionam por dentro, não só o que aparece na tela.",
       "Quando não tô no código, geralmente tô estudando, lendo ou fuçando algum projeto pessoal. Gosto de coisa bem feita e de aprender fazendo."
     ],
-    "stackHeading": "Stack principal"
+    "stackHeading": "Tecnologias"
   },
   "projects": {
     "heading": "Projetos",
