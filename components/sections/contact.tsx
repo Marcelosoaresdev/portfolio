@@ -54,10 +54,10 @@ const CONTACTS: ContactItem[] = [
     external: true,
   },
   {
-    href: "mailto:marcelo@example.com",
+    href: "mailto:marcelohsoares142@gmail.com",
     icon: <Mail className="h-5 w-5" />,
     key: "email",
-    label: "marcelo@example.com",
+    label: "marcelohsoares142@gmail.com",
     external: false,
   },
 ];
