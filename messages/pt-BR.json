@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "title": "Marcelo Soares — Engenheiro de Software",
+    "title": "Marcelo Soares — Desenvolvedor Full Stack",
     "description": "Portfólio pessoal de Marcelo Soares. Projetos open-source, artigos e contato."
   },
   "nav": { "about": "Sobre", "projects": "Projetos", "contact": "Contato", "languageLabel": "Mudar idioma para" },
   "hero": {
     "greeting": "Olá, eu sou",
-    "title": "Engenheiro de Software",
+    "title": "Desenvolvedor Full Stack",
     "subtitle": "Construindo produtos digitais com foco em simplicidade e performance.",
     "ctaProjects": "Ver projetos",
     "ctaContact": "Contato"
@@ -14,8 +14,8 @@
   "about": {
     "heading": "Sobre",
     "bio": [
-      "Sou Marcelo Soares, engenheiro de software baseado no Brasil. Trabalho com desenvolvimento web há anos, focando em criar experiências digitais limpas e funcionais.",
-      "Meu foco está em TypeScript, React e Next.js. Gosto de código bem escrito, interfaces acessíveis e produtos que resolvem problemas reais."
+      "Sou Marcelo Soares, desenvolvedor full stack baseado no Brasil. Trabalho com desenvolvimento web, da interface ao banco de dados — APIs, autenticação e persistência.",
+      "No front, TypeScript, React e Next.js. No back, Node.js, PostgreSQL e Drizzle. Gosto de código bem escrito, interfaces acessíveis e produtos que resolvem problemas reais."
     ],
     "stackHeading": "Stack principal"
   },
