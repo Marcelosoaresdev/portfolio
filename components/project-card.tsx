@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, Star } from "lucide-react";
@@ -15,20 +16,20 @@ export function ProjectCard({ repo, viewLabel, starsLabel }: Props) {
       <CardHeader>
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-sans text-lg font-semibold leading-tight tracking-tight">
-            {repo.name}
+            {repo.displayName ?? repo.name}
           </h3>
           <a
-            href={repo.html_url}
+            href={repo.liveUrl ?? repo.html_url}
             target="_blank"
             rel="noreferrer noopener"
-            aria-label={`${viewLabel}: ${repo.name}`}
+            aria-label={`${viewLabel}: ${repo.displayName ?? repo.name}`}
             className="-mr-1 -mt-1 inline-flex h-7 w-7 shrink-0 cursor-pointer items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
       </CardHeader>
-      <CardContent className="flex h-full flex-col gap-4">
+      <CardContent className="flex flex-col gap-4">
         <p className="text-sm leading-relaxed text-muted-foreground">
           {repo.description}
         </p>
@@ -51,6 +52,20 @@ export function ProjectCard({ repo, viewLabel, starsLabel }: Props) {
           )}
         </div>
       </CardContent>
+      {repo.image && (
+        <div
+          data-slot="card-footer"
+          className="relative w-full overflow-hidden border-t border-border bg-muted"
+        >
+          <Image
+            src={repo.image}
+            alt={`${repo.name} preview`}
+            width={1696}
+            height={912}
+            className="block h-auto w-full"
+          />
+        </div>
+      )}
     </Card>
   );
 }

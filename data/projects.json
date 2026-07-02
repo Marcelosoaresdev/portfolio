@@ -8,5 +8,13 @@
     "slug": "SiteCursos",
     "descriptionPt": "Plataforma de cursos da Vitis Souls. Front completo em React + Vite + TailwindCSS: code splitting, lazy loading, otimização de imagens com Sharp/WebP e SEO técnico. Construído do zero, da UI ao deploy.",
     "descriptionEn": "Course platform for Vitis Souls. Full frontend in React + Vite + TailwindCSS: code splitting, lazy loading, Sharp/WebP image optimization, and technical SEO. Built from scratch, from UI to deploy."
+  },
+  {
+    "slug": "Dashboard-Financeiro",
+    "displayName": "Dashboard Financeiro",
+    "liveUrl": "https://dashboard-financeiro-omega-two.vercel.app/",
+    "image": "/dashboardImage.png",
+    "descriptionPt": "Dashboard financeiro pessoal: receitas, despesas e saldo em um só lugar. Filtros por período e gráficos de evolução patrimonial.",
+    "descriptionEn": "Personal finance dashboard: income, expenses, and balance in one place. Period filters and net worth evolution charts."
   }
 ]

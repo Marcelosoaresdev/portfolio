@@ -30,7 +30,7 @@ export function Projects({ projects }: Props) {
               <FadeIn key={repo.id} delay={idx * 0.05}>
                 <ProjectCard
                   repo={repo}
-                  viewLabel={t("viewOnGithub")}
+                  viewLabel={repo.liveUrl ? t("viewProject") : t("viewOnGithub")}
                   starsLabel={t("starsLabel")}
                 />
               </FadeIn>
